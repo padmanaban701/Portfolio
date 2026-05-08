@@ -61,8 +61,8 @@ const Hero = () => {
               <span className="text-sm font-medium text-primary-foreground/80">Frontend Developer @ Admiro Soft Technologies</span>
             </div>
             
-            <h1 ref={titleRef} className="font-display font-bold leading-tight mb-6 text-5xl md:text-7xl perspective-1000">
-              Hi, I'm <span className="text-primary">Padmanaban</span>. <br />
+            <h1 ref={titleRef} className="font-display font-bold leading-[1.1] mb-6 text-3xl sm:text-5xl md:text-7xl perspective-1000">
+              Hi, I'm <span className="text-primary">Padmanaban</span>. <br className="hidden sm:block" />
               <span className="opacity-80">Crafting High-Performance Digital Experiences.</span>
             </h1>
             
@@ -91,8 +91,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex-1 relative hero-image">
-            <div className="relative w-64 h-64 md:w-96 md:h-96 mx-auto">
+          <div className="flex-1 relative hero-image mt-12 lg:mt-0">
+            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-96 md:h-96 mx-auto">
               <div className="absolute inset-0 border-2 border-primary/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
               <div className="absolute inset-4 border-2 border-secondary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
               

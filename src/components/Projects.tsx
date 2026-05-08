@@ -73,7 +73,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {projects.map((project, index) => (
-            <div key={index} className="project-card glass-card p-10 flex flex-col hover:border-primary/40 transition-all duration-500 group">
+            <div key={index} className="project-card glass-card p-6 sm:p-10 flex flex-col hover:border-primary/40 transition-all duration-500 group">
               <div className="flex items-start justify-between mb-8">
                 <div className="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-primary/10 transition-colors">
                   {project.icon}

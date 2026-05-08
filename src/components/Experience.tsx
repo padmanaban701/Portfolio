@@ -53,7 +53,7 @@ const Experience = () => {
                   {/* Timeline Dot */}
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-black group-hover:scale-125 transition-transform"></div>
                   
-                  <div className="glass-card p-8 group-hover:border-primary/30 transition-all">
+                  <div className="glass-card p-6 sm:p-8 group-hover:border-primary/30 transition-all">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                       <div>
                         <h4 className="text-2xl font-bold group-hover:text-primary transition-colors">{item.role}</h4>

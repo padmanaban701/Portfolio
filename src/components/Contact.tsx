@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <section id="contact" ref={sectionRef} className="py-24">
       <div className="container mx-auto px-6">
-        <div className="contact-card glass-card p-10 md:p-16 relative overflow-hidden">
+        <div className="contact-card glass-card p-6 sm:p-10 md:p-16 relative overflow-hidden">
           {/* Background Glow */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 blur-[100px] rounded-full"></div>
           

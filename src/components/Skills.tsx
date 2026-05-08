@@ -45,7 +45,7 @@ const Skills = () => {
 
           <div className="lg:w-2/3 grid grid-cols-1 gap-6">
             {skillCategories.map((cat, i) => (
-              <div key={i} className="glass-card p-10 hover:bg-white/[0.04] transition-colors">
+              <div key={i} className="glass-card p-6 sm:p-10 hover:bg-white/[0.04] transition-colors">
                 <div className="flex items-center gap-5 mb-8">
                   <div className="p-4 rounded-2xl bg-primary/10 text-primary">
                     {cat.icon}
