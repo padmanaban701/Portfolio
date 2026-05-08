@@ -48,7 +48,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="min-h-screen relative flex items-center pt-20 overflow-hidden">
+    <section ref={containerRef} className="min-h-screen relative flex items-center pt-32 md:pt-40 lg:pt-48 overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full"></div>
