@@ -25,10 +25,25 @@ const Experience = () => {
 
   const education = [
     {
-      degree: "Bachelor of Engineering (CSE)",
+      degree: "Bachelor of Engineering",
       school: "Dr. N.G.P Institute of Technology, Coimbatore",
       period: "2019 - 2023",
-      grade: "7.8 CGPA"
+      grade: "7.8 CGPA",
+      description: "Completed Computer Science and Engineering with 7.8 CGPA at Dr.N.G.P.Institute of Technology, Coimbatore."
+    },
+    {
+      degree: "HSC",
+      school: "SVV Matriculation Higher Secondary School",
+      period: "2018 - 2019",
+      grade: "71.3%",
+      description: "Completed HSC with 71.3% at SVV Matriculation Higher Secondary School, Gobichettipalayam."
+    },
+    {
+      degree: "SSLC",
+      school: "SVV Matriculation Higher Secondary School",
+      period: "2016 - 2017",
+      grade: "92.6%",
+      description: "Completed SSLC with 92.6% at SVV Matriculation Higher Secondary School, Gobichettipalayam."
     }
   ];
 
@@ -84,11 +99,8 @@ const Experience = () => {
           </div>
 
           <div className="lg:w-1/3">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="p-3 rounded-2xl bg-secondary/20 text-secondary">
-                <GraduationCap size={28} />
-              </div>
-              <h3 className="text-3xl font-display font-bold">Education</h3>
+            <div className="bg-[#1a2b3c] px-6 py-3 rounded-xl mb-12 text-center border border-white/5 shadow-lg">
+              <h3 className="text-xs font-display font-bold uppercase tracking-[0.3em] text-white/90">Academic Qualification</h3>
             </div>
             
             <div className="space-y-6">
@@ -96,6 +108,7 @@ const Experience = () => {
                 <div key={i} className="glass-card p-8 group hover:border-secondary/30 transition-all">
                   <h4 className="text-lg font-bold group-hover:text-secondary transition-colors mb-2">{item.degree}</h4>
                   <div className="text-sm opacity-60 mb-4">{item.school}</div>
+                  <p className="text-xs text-white/50 mb-6 leading-relaxed">{item.description}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-white/5">
                     <div className="text-secondary font-bold text-xl">{item.grade}</div>
                     <div className="text-xs opacity-50 px-3 py-1 rounded-full bg-white/5 tracking-wider">{item.period}</div>
