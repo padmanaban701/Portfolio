@@ -84,12 +84,18 @@ const Contact = () => {
             </div>
 
             <div className="lg:w-1/2">
-              <form className="glass p-8 md:p-10 rounded-3xl space-y-6 border-white/5">
+              <form 
+                action="https://formspree.io/f/YOUR_FORMSPREE_ID" 
+                method="POST" 
+                className="glass p-8 md:p-10 rounded-3xl space-y-6 border-white/5"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-white/70 ml-1">Name</label>
                     <input 
                       type="text" 
+                      name="name"
+                      required
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all text-white" 
                       placeholder="Your Name" 
                     />
@@ -98,6 +104,8 @@ const Contact = () => {
                     <label className="text-sm font-semibold text-white/70 ml-1">Email</label>
                     <input 
                       type="email" 
+                      name="email"
+                      required
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all text-white" 
                       placeholder="Your Email" 
                     />
@@ -106,11 +114,13 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-white/70 ml-1">Message</label>
                   <textarea 
+                    name="message"
+                    required
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-primary transition-all text-white min-h-[150px] resize-none" 
                     placeholder="How can I help you?"
                   ></textarea>
                 </div>
-                <button className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">
+                <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">
                   Send Message <Send size={20} />
                 </button>
               </form>
