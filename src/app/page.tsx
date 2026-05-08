@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
@@ -8,10 +9,10 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="bg-black text-white selection:bg-primary/30 selection:text-primary-foreground">
+    <main className="bg-background text-foreground selection:bg-primary/30 selection:text-primary-foreground transition-colors duration-500">
       <Navbar />
       <Hero />
-      <div id="about" className="h-0" /> {/* Spacer for about scroll target */}
+      <About />
       <Projects />
       <Skills />
       <Experience />

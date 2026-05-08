@@ -48,8 +48,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="min-h-screen relative flex items-center pt-32 md:pt-40 lg:pt-48 overflow-hidden">
+    <section ref={containerRef} className="min-h-screen relative flex items-center pt-32 md:pt-40 lg:pt-48 overflow-hidden grid-pattern">
       {/* Background Glows */}
+      <div className="absolute inset-0 aurora-glow pointer-events-none"></div>
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full"></div>
 
@@ -67,7 +68,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Frontend Developer at Admiro Soft Technologies, specializing in building responsive, user-friendly web applications with a focus on 25% faster load times and 50% better engagement.
+              Frontend Developer at Admiro Soft Technologies. I specialize in building high-performance, accessible, and stunning digital experiences that drive real results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

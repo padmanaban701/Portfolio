@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 import { AnimationProvider } from "@/providers/AnimationProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import MouseFollower from "@/components/MouseFollower";
 
 export default function RootLayout({
@@ -27,10 +28,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <AnimationProvider>
-          <MouseFollower />
-          {children}
-        </AnimationProvider>
+        <ThemeProvider>
+          <AnimationProvider>
+            <MouseFollower />
+            {children}
+          </AnimationProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

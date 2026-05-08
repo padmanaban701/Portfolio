@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, GraduationCap, Calendar, TrendingUp, Users } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, TrendingUp, Users, MapPin, ArrowUpRight } from 'lucide-react';
 
 const Experience = () => {
   const work = [
@@ -48,46 +48,62 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-black/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full"></div>
-
+    <section id="experience" className="py-24 bg-[#030712] relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16">
-          <div className="lg:w-2/3">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="p-3 rounded-2xl bg-primary/20 text-primary">
-                <Briefcase size={28} />
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Work Experience / Professional Journey */}
+          <div className="lg:w-1/2 space-y-8">
+            <div className="flex items-center gap-4 mb-10">
+              <div className="p-4 rounded-2xl bg-[#ff6b2b]/10 text-[#ff6b2b]">
+                <Briefcase size={24} />
               </div>
-              <h3 className="text-3xl font-display font-bold">Professional Journey</h3>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Work Experience</h3>
+                <p className="text-xs text-white/30">{work.length} positions</p>
+              </div>
             </div>
             
-            <div className="space-y-12">
+            <div className="space-y-6">
               {work.map((item, i) => (
-                <div key={i} className="relative pl-8 border-l-2 border-white/10 group">
-                  {/* Timeline Dot */}
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-black group-hover:scale-125 transition-transform"></div>
+                <div key={i} className={`relative p-8 rounded-2xl bg-[#0a0f1a] border border-white/5 overflow-hidden transition-all hover:border-white/10 group ${i === 0 ? 'border-l-4 border-l-[#ff6b2b]' : 'border-l-4 border-l-[#3b82f6]'}`}>
+                  {/* Background Number */}
+                  <div className="absolute top-4 right-4 text-7xl font-black text-white/[0.03] select-none group-hover:text-white/[0.05] transition-colors">
+                    0{i + 1}
+                  </div>
                   
-                  <div className="glass-card p-6 sm:p-8 group-hover:border-primary/30 transition-all">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-4">
                       <div>
-                        <h4 className="text-2xl font-bold group-hover:text-primary transition-colors">{item.role}</h4>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-primary font-semibold">{item.company}</span>
-                          <span className="text-white/20">•</span>
-                          <span className="text-white/40 text-sm">{item.type}</span>
+                        <h4 className="text-xl font-bold text-white mb-2">{item.role}</h4>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#ff6b2b] font-medium">{item.company}</span>
+                          {i === 0 && (
+                            <span className="flex items-center gap-1.5 text-[10px] font-bold text-[#10b981] bg-[#10b981]/10 px-2.5 py-0.5 rounded-full">
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span>
+                              Current
+                            </span>
+                          )}
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-sm font-medium text-white/50 bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
-                        <Calendar size={14} className="text-primary" /> {item.period}
+                      <div className="text-[#ff6b2b]">
+                        <ArrowUpRight size={20} />
                       </div>
                     </div>
                     
-                    <p className="text-white/70 leading-relaxed mb-6">{item.description}</p>
+                    <div className="flex flex-wrap gap-4 text-xs text-white/30 mb-6">
+                      <div className="flex items-center gap-2">
+                        <Calendar size={14} className="text-white/20" /> {item.period}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin size={14} className="text-white/20" /> {item.location}
+                      </div>
+                    </div>
                     
-                    <div className="flex flex-wrap gap-3">
+                    <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-lg">{item.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2">
                       {item.skills.map(skill => (
-                        <span key={skill} className="text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-md bg-white/5 text-white/50 border border-white/5">
+                        <span key={skill} className="text-[10px] font-bold px-3 py-1.5 rounded-full bg-[#1e293b] text-white/60 border border-white/5">
                           {skill}
                         </span>
                       ))}
@@ -98,45 +114,43 @@ const Experience = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/3">
-            <div className="bg-[#1a2b3c] px-6 py-3 rounded-xl mb-12 text-center border border-white/5 shadow-lg">
-              <h3 className="text-xs font-display font-bold uppercase tracking-[0.3em] text-white/90">Academic Qualification</h3>
+          {/* Academic Qualification */}
+          <div className="lg:w-1/2 space-y-8">
+            <div className="flex items-center gap-4 mb-10">
+              <div className="p-4 rounded-2xl bg-[#3b82f6]/10 text-[#3b82f6]">
+                <GraduationCap size={24} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Academic Qualification</h3>
+                <p className="text-xs text-white/30">{education.length} levels</p>
+              </div>
             </div>
             
             <div className="space-y-6">
               {education.map((item, i) => (
-                <div key={i} className="glass-card p-8 group hover:border-secondary/30 transition-all">
-                  <h4 className="text-lg font-bold group-hover:text-secondary transition-colors mb-2">{item.degree}</h4>
-                  <div className="text-sm opacity-60 mb-4">{item.school}</div>
-                  <p className="text-xs text-white/50 mb-6 leading-relaxed">{item.description}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <div className="text-secondary font-bold text-xl">{item.grade}</div>
-                    <div className="text-xs opacity-50 px-3 py-1 rounded-full bg-white/5 tracking-wider">{item.period}</div>
+                <div key={i} className="relative p-8 rounded-2xl bg-[#0a0f1a] border border-white/5 border-l-4 border-l-[#3b82f6]/50 overflow-hidden transition-all hover:border-white/10 group">
+                  {/* Background Number */}
+                  <div className="absolute top-4 right-4 text-7xl font-black text-white/[0.03] select-none group-hover:text-white/[0.05] transition-colors">
+                    0{i + 1}
+                  </div>
+
+                  <div className="relative z-10">
+                    <h4 className="text-xl font-bold text-white mb-2">{item.degree}</h4>
+                    <div className="text-[#3b82f6] font-medium mb-4">{item.school}</div>
+                    
+                    <div className="flex flex-wrap gap-4 text-xs text-white/30 mb-6">
+                      <div className="flex items-center gap-2">
+                        <Calendar size={14} className="text-white/20" /> {item.period}
+                      </div>
+                      <div className="flex items-center gap-2 font-bold text-[#3b82f6]">
+                        {item.grade}
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm text-white/50 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Impact Cards */}
-            <div className="mt-12 space-y-4">
-              <div className="glass-card p-6 flex items-center gap-4 border-primary/20 bg-primary/5">
-                <div className="p-3 rounded-xl bg-primary/20 text-primary">
-                  <TrendingUp size={20} />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">25%</div>
-                  <div className="text-xs opacity-60 uppercase tracking-tighter">Performance Boost</div>
-                </div>
-              </div>
-              <div className="glass-card p-6 flex items-center gap-4 border-secondary/20 bg-secondary/5">
-                <div className="p-3 rounded-xl bg-secondary/20 text-secondary">
-                  <Users size={20} />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-secondary">50%</div>
-                  <div className="text-xs opacity-60 uppercase tracking-tighter">Engagement Increase</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

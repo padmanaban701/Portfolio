@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X, Mail, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/providers/ThemeProvider';
 import gsap from 'gsap';
 
 const Github = ({ size = 20 }) => (
@@ -46,6 +47,8 @@ const Navbar = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <nav ref={navRef} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'}`}>
       <div className="container mx-auto px-6 nav-container">
@@ -73,6 +76,13 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
+            <button 
+              onClick={toggleTheme}
+              className="p-2 rounded-full glass border-white/10 text-white/70 hover:text-primary transition-all"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <a href="https://github.com/padmanaban701" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70 hover:text-white transition-colors">
               <Github size={20} />
             </a>
@@ -105,9 +115,22 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex gap-4 mt-4">
-                <Github size={24} />
-                <Linkedin size={24} />
-                <Mail size={24} />
+                <button 
+                  onClick={toggleTheme}
+                  className="p-2 rounded-xl bg-white/5 border border-white/10 text-white/70"
+                  aria-label="Toggle Theme"
+                >
+                  {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
+                </button>
+                <a href="https://github.com/padmanaban701" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70">
+                  <Github size={24} />
+                </a>
+                <a href="https://www.linkedin.com/in/padmanaban-p-28290b188" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70">
+                  <Linkedin size={24} />
+                </a>
+                <a href="mailto:padmanabanponnusamy701@gmail.com" className="p-2 text-white/70">
+                  <Mail size={24} />
+                </a>
               </div>
             </div>
           </div>
