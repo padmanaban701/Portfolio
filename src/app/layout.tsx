@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 };
 
 import { AnimationProvider } from "@/providers/AnimationProvider";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 import MouseFollower from "@/components/MouseFollower";
 
 export default function RootLayout({
@@ -23,17 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <ThemeProvider>
-          <AnimationProvider>
-            <MouseFollower />
-            {children}
-          </AnimationProvider>
-        </ThemeProvider>
+        <AnimationProvider>
+          <MouseFollower />
+          {children}
+        </AnimationProvider>
       </body>
     </html>
   );
