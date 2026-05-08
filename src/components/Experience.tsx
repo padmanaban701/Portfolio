@@ -9,17 +9,17 @@ const Experience = () => {
       type: "Full-time",
       period: "Jun 2024 - Present",
       location: "Tiruppur, Tamil Nadu",
-      description: "Building responsive, user-friendly web apps with reusable components and optimized performance. Improved load times by 25% and boosted mobile engagement by 50%.",
-      skills: ["React.js", "JavaScript", "Tailwind CSS", "UI/UX"]
+      description: "Improved application load time by 25% using code splitting and asset optimization. Increased mobile engagement by 50% by implementing a mobile-first responsive design strategy. Implemented robust state management using Zustand and optimized data fetching with React Query. Built scalable UI components using React & Tailwind CSS for complex enterprise dashboards. Integrated GPS tracking and real-time features using Mapbox and WebSockets.",
+      skills: ["React.js", "Zustand", "React Query", "Tailwind CSS", "Mapbox API", "WebSockets"]
     },
     {
-      role: "Web Developer",
+      role: "Web Developer Intern",
       company: "DotWorld Technologies Pvt Ltd",
       type: "Internship",
       period: "Dec 2023 - Feb 2024",
       location: "Coimbatore, Tamil Nadu",
-      description: "Sharpening skills in GSAP, React, Javascript and Next.js. Contributed innovative solutions in a dynamic tech landscape.",
-      skills: ["GSAP", "React", "Next.js", "JavaScript"]
+      description: "Developed interactive UI components using HTML, CSS, and JavaScript. Implemented smooth scroll animations and micro-interactions using GSAP. Improved overall user experience by 20% through UI refactoring and feedback loops.",
+      skills: ["HTML/CSS", "JavaScript", "GSAP", "UI Refactoring"]
     }
   ];
 
