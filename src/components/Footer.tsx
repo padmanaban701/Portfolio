@@ -37,10 +37,10 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
               <span className="text-xs font-bold uppercase tracking-widest text-white/30">Social</span>
               <nav className="flex flex-col gap-2">
-                <a href="https://www.linkedin.com/in/padmanaban-p-28290b188?utm_source=share_via&utm_content=profile&utm_medium=member_android" className="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/padmanaban-p-28290b188" className="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-2">
                   <Linkedin size={14} /> LinkedIn
                 </a>
-                <a href="#" className="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-2">
+                <a href="https://github.com/padmanaban701" className="text-sm text-white/60 hover:text-primary transition-colors flex items-center gap-2">
                   <Github size={14} /> GitHub
                 </a>
               </nav>

@@ -73,10 +73,10 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70 hover:text-white transition-colors">
+            <a href="https://github.com/padmanaban701" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70 hover:text-white transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/padmanaban-p-28290b188?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/padmanaban-p-28290b188" target="_blank" rel="noopener noreferrer" className="p-2 text-white/70 hover:text-white transition-colors">
               <Linkedin size={20} />
             </a>
             <a href="/Padmanaban_Resume.docx" download className="bg-primary hover:bg-primary/80 px-5 py-2 rounded-full text-sm font-semibold transition-all">
