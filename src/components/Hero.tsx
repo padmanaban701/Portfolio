@@ -74,7 +74,7 @@ const Hero = () => {
               <a href="#projects" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-lg shadow-primary/25">
                 Explore Projects <ArrowRight size={20} />
               </a>
-              <a href="/PADMANABAN_RESUME.pdf" download className="glass hover:bg-white/10 px-8 py-4 rounded-full font-bold transition-all border-white/10">
+              <a href="/Padmanaban_Resume.docx" download className="glass hover:bg-white/10 px-8 py-4 rounded-full font-bold transition-all border-white/10">
                 Download CV
               </a>
             </div>
